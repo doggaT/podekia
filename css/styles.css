@@ -1,0 +1,476 @@
+/* Global styles begin */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	/* Fonts */
+	--body: 'Roboto Mono', monospace;
+	--secondary: 'Press Start 2P', cursive;
+
+	/* Colors */
+	--link: black;
+	--hp: hsl(125, 62%, 49%);
+	--attack: hsl(0, 60%, 57%);
+	--defense: hsl(300, 47%, 75%);
+	--special-attack: hsl(16, 100%, 66%);
+	--special-defense: hsl(43, 89%, 38%);
+	--speed: hsl(182, 25%, 50%);
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+	color: var(--link);
+	font-family: var(--body);
+}
+
+h1 {
+	font-family: var(--secondary);
+	font-size: 1rem;
+}
+
+p {
+	font-family: var(--body);
+}
+
+/* Global styles end */
+
+/** Burger menu begin **/
+
+.nav--menu-icon {
+	display: block;
+	cursor: pointer;
+	position: absolute;
+	top: 1.2rem;
+	right: 2.2rem;
+	z-index: 20;
+}
+
+.nav--menu-icon-top-bar {
+	height: 0.13rem;
+	width: 2.4rem;
+	border-radius: 1rem;
+	background-color: black;
+}
+
+.nav--menu-icon-mid-bar {
+	height: 0.13rem;
+	width: 1.5rem;
+	border-radius: 1rem;
+	margin-top: 0.35rem;
+	background-color: black;
+	transition: width 0.2s ease-out;
+}
+
+.nav--menu-icon-bottom-bar {
+	height: 0.13rem;
+	width: 0.7rem;
+	border-radius: 1rem;
+	margin-top: 0.35rem;
+	background-color: black;
+	transition: width 0.2s ease-in-out 0.1s;
+}
+
+.nav--menu-icon:hover .nav--menu-icon-mid-bar {
+	width: 2.4rem;
+}
+
+.nav--menu-icon:hover .nav--menu-icon-bottom-bar {
+	width: 2.4rem;
+}
+
+/** Burger menu end **/
+
+/* Nav styles begin */
+
+.nav {
+	background-color: whitesmoke;
+}
+
+.nav--branding-logo {
+	width: 7rem;
+	margin-left: 1rem;
+}
+
+#nav-links {
+	text-align: center;
+}
+
+.hidden {
+	display: none;
+}
+
+.nav--links-item {
+	border-bottom: 0.1rem solid black;
+	background-color: whitesmoke;
+	font-size: 0.8rem;
+}
+
+.nav--links-link {
+	display: block;
+	font-family: var(--body);
+	font-size: 1rem;
+	padding: 0.8rem 0;
+	width: 100%;
+	transition: all 0.1s ease-in-out;
+}
+
+.nav--links-item:hover .nav--links-link {
+	background-color: rgb(73, 73, 73);
+	color: aliceblue;
+}
+
+/* Nav styles end */
+
+/* Content styles begin */
+
+.content {
+	flex: 1 0 auto;
+	margin: auto;
+	margin-top: 2.5rem;
+}
+
+.content--search {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.content--search-heading {
+	font-size: 0.9rem;
+	line-height: 1.2rem;
+	margin-top: 1rem;
+}
+
+.content--form {
+	margin-top: 2rem;
+	display: flex;
+}
+
+.content--form > input {
+	height: 2.4rem;
+	font-size: 0.8rem;
+	font-family: var(--body);
+	width: 15rem;
+	padding-left: 0.5rem;
+}
+
+.content--form-btn {
+	height: 2.4rem;
+	padding: 0 0.5rem;
+	cursor: pointer;
+	border: none;
+	background-color: transparent;
+	margin-left: -2.95rem;
+	transition: all 0.2s ease-in-out;
+	border-bottom-right-radius: 0.2rem;
+	border-top-right-radius: 0.2rem;
+}
+
+.content--form-btn:hover {
+	background-color: rgb(73, 73, 73);
+	color: aliceblue;
+}
+
+#searchbar::placeholder {
+	font-size: 0.7rem;
+	font-style: italic;
+}
+
+/* Content styles end */
+
+/* Content styles begin */
+
+.content {
+	margin: 1rem;
+}
+
+.card-img {
+	margin-top: 0.9rem;
+}
+
+#card {
+	margin-top: 2rem;
+	border: 0.1rem solid black;
+	font-family: var(--body);
+	padding: 1rem;
+	border-radius: 0.2rem;
+}
+
+.card-heading {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	margin: 0 1rem;
+	font-size: 0.8rem;
+}
+
+.card-content {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.card-stats {
+	display: flex;
+	flex-direction: column;
+	margin: 1rem 1rem;
+}
+
+.card-stats > p {
+	display: flex;
+}
+
+.card-stats > p > span {
+	margin-left: 1rem;
+}
+.type {
+	font-size: 0.8rem;
+}
+
+.card-weight {
+	display: flex;
+	justify-content: flex-end;
+	margin-right: 1rem;
+	align-items: center;
+	font-size: 0.8rem;
+}
+
+.stat-name {
+	flex-basis: 45%;
+	font-size: 0.8rem;
+	text-align: right;
+	padding-right: 0.5rem;
+}
+
+.stats-name {
+	flex-basis: 45%;
+	font-size: 0.7rem;
+	padding-right: 0.5rem;
+	margin: 0.4rem 0;
+}
+
+.stat {
+	margin: 0.4rem auto;
+	height: 100%;
+	width: 80%;
+	background-color: #ddd;
+	border-radius: 0.8rem;
+	overflow: hidden;
+}
+
+.wrap {
+	display: flex;
+	align-items: center;
+}
+
+/* Content styles end */
+
+/* Footer styles begin */
+
+.footer {
+	flex-shrink: 0;
+	padding: 2rem 0;
+	background-color: whitesmoke;
+	text-align: center;
+	font-size: 0.8rem;
+}
+
+/* Footer styles end */
+
+/* Types begin */
+
+.type-wrapper {
+	border: 0.1rem transparent;
+	border-radius: 5rem;
+	margin: 0.5rem 0;
+	padding: 0.3rem 0.4rem;
+	text-align: center;
+}
+
+.normal {
+	background-color: rgb(168, 169, 121);
+}
+
+.fire {
+	background-color: rgb(240, 128, 48);
+}
+
+.water {
+	background-color: rgb(104, 145, 241);
+}
+
+.grass {
+	background-color: rgb(121, 201, 80);
+}
+
+.electric {
+	background-color: rgb(249, 208, 49);
+}
+
+.ice {
+	background-color: rgb(152, 217, 217);
+}
+
+.fighting {
+	background-color: rgb(193, 49, 40);
+}
+.poison {
+	background-color: rgb(160, 65, 161);
+}
+
+.ground {
+	background-color: rgb(224, 192, 104);
+}
+
+.flying {
+	background-color: rgb(168, 145, 241);
+}
+
+.psychic {
+	background-color: rgb(249, 88, 137);
+}
+
+.bug {
+	background-color: rgb(168, 185, 33);
+}
+
+.rock {
+	background-color: rgb(185, 161, 56);
+}
+
+.ghost {
+	background-color: rgb(113, 89, 152);
+}
+
+.dark {
+	background-color: rgb(113, 88, 73);
+}
+
+.dragon {
+	background-color: rgb(112, 56, 248);
+}
+
+.steel {
+	background-color: rgb(185, 185, 208);
+}
+
+.fairy {
+	background-color: rgb(240, 182, 188);
+}
+
+/* Types end */
+
+/* Stats begin */
+
+.hp {
+	background-color: var(--hp);
+}
+
+.attack {
+	background-color: var(--attack);
+}
+
+.defense {
+	background-color: var(--defense);
+}
+
+.special-attack {
+	background-color: var(--special-attack);
+}
+
+.special-defense {
+	background-color: var(--special-defense);
+}
+
+.speed {
+	background-color: var(--speed);
+}
+
+.hp-b {
+	background-color: hsl(125, 62%, 89%);
+}
+
+.attack-b {
+	background-color: hsl(0, 60%, 77%);
+}
+
+.defense-b {
+	background-color: hsl(300, 47%, 90%);
+}
+
+.special-attack-b {
+	background-color: hsl(16, 100%, 86%);
+}
+
+.special-defense-b {
+	background-color: hsl(43, 89%, 68%);
+}
+
+.speed-b {
+	background-color: hsl(182, 25%, 80%);
+}
+
+/* Stats end */
+
+/* Media queries begin */
+
+@media only screen and (min-width: 500px) {
+	.nav--menu-icon {
+		display: none;
+	}
+
+	.nav {
+		display: flex;
+		align-items: center;
+	}
+
+	#nav-links {
+		display: flex;
+		gap: 1rem;
+		margin: auto;
+		width: 25rem;
+	}
+
+	.nav--links-item {
+		display: flex;
+
+		width: 100%;
+		border-bottom: none;
+	}
+
+	#card {
+		width: 30rem;
+		margin: auto;
+		margin-top: 2rem;
+	}
+
+	.stats-name {
+		font-size: 0.8rem;
+	}
+
+	.card-heading {
+		justify-content: space-around;
+	}
+}
+
+/* Media queries end */

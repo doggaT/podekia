@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link rel="stylesheet" href="./css/styles.css" />
+		<title>Pokédia</title>
+	</head>
+	<body>
+		<nav class="nav">
+			<div class="nav--branding">
+				<a class="nav--branding-link" href="#">
+					<!-- img taken from: https://www.seekpng.com/ipng/u2w7w7y3q8q8y3u2_pokemon-logo-red-pokmon-red-version-reproduction-nintendo/ -->
+					<img class="nav--branding-logo" src="./assets/pokemon-logo.png" alt="logo" />
+				</a>
+			</div>
+			<div id="burger-menu" class="nav--menu-icon">
+				<div class="nav--menu-icon-top-bar"></div>
+				<div class="nav--menu-icon-mid-bar"></div>
+				<div class="nav--menu-icon-bottom-bar"></div>
+			</div>
+
+			<ul id="nav-links" class="nav--links hidden">
+				<li class="nav--links-item">
+					<a class="nav--links-link" href="./pages/pokedex.html">Pokédex</a>
+				</li>
+				<li class="nav--links-item">
+					<a class="nav--links-link" href="#">link 2</a>
+				</li>
+				<li class="nav--links-item">
+					<a class="nav--links-link" href="#">link 3</a>
+				</li>
+			</ul>
+		</nav>
+		<section class="content">
+			<div class="content--search">
+				<h1 class="content--search-heading">What's your favorite Pokémon?!</h1>
+				<form onsubmit="return false" class="content--form">
+					<input id="searchbar" type="text" placeholder="Search by name or number" />
+					<button type="submit" class="content--form-btn" onclick="getPokemon()">Send</button>
+				</form>
+			</div>
+			<div id="content-result"></div>
+		</section>
+		<footer class="footer">
+			<p>Created by <a href="https://github.com/doggaT">doggaT</a></p>
+		</footer>
+		<script src="./js/script.js"></script>
+		<script src="./js/index.js"></script>
+	</body>
+</html>
