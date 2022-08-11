@@ -4,7 +4,6 @@
 let searchbar = document.getElementById('searchbar');
 let pokemonStored;
 let searchedPokemon = '';
-let errorMessage = '';
 
 searchbar.addEventListener('keyup', e => {
 	searchedPokemon = e.target.value;
@@ -26,12 +25,11 @@ async function getPokemon() {
 			types: data.types,
 			weight: data.weight,
 		};
-		console.log(data);
 
 		localStorage.setItem('favoritePokemon', JSON.stringify(pokemon));
 		createPokemon();
 	} else {
-		errorMessage = 'Enter a Pokémon';
+		console.log(`Could not find ${searchedPokemon}`);
 	}
 }
 
@@ -148,7 +146,7 @@ function createPokemon() {
 				.join('')}
 			</div>
 			<div class="card-weight">
-				<span>Weight: ${pokemonStored.weight}</span>
+				<span>Weight: ${pokemonStored.weight / 10} kg</span>
 			</div>
 		</div>
 	`;
